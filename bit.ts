@@ -32,13 +32,20 @@ namespace bit {
             shiftLeftN(n: number):number{
                 return this.num << n;
             }
+        /**
+         * convert to number
+         */
+        //% bit.defl=Bit
+        //% block="%Bit|to number"
+            toNumber():number{
+                return this.num ;
+            }
     }
     /**
      * Convert number to bit
      * @param n number, eg: 1234
      */
     //% block="convert from number %n"
-    //% blockSetVariable=Bit
     export function convNum(n: number): bit {
         let Bit = new bit();
         Bit.num=n;
@@ -49,7 +56,6 @@ namespace bit {
      * @param s hexadecimal strings, eg: 1f
      */
     //% block="convert from hexadecimal %s"
-    //% blockSetVariable=Bit
     export function convHex(s: string):bit{
         let Bit = new bit();
         let hex="0123456789abcdef";
@@ -70,7 +76,6 @@ namespace bit {
      * @param s bit strings, eg: 10110
      */
     //% block="convert from binary %s"
-    //% blockSetVariable=Bit
     export function convBin(s: string):bit{
         let Bit = new bit();
         Bit.num = 0;
