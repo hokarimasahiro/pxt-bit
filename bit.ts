@@ -20,17 +20,19 @@ namespace bit {
          */
         //% bit.defl=Bit
         //% block="%Bit|shift left %n"
-            shiftLeft(n: number){
-                this.num=this.num << n;
+            shiftLeft(n: number):bit{
+                this.num= this.num << n;
+                return this;
             }
         /**
-         * shift left
+         * shift right
          * @param n bit count, eg: 2
          */
         //% bit.defl=Bit
-        //% block="%Bit|shift left %n"
-            shiftLeftN(n: number):number{
-                return this.num << n;
+        //% block="%Bit|shift right %n"
+            shiftRight(n: number):bit{
+                this.num= this.num >> n;
+                return this;
             }
         /**
          * convert to number
