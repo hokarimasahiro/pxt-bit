@@ -1,4 +1,4 @@
-//% weight=100 color=#0fbc11 icon="\u265f" block="bit"
+//% color=#0fbc11 icon="\u265f" block="bit"
 namespace bit {
     export enum func{
         //% block=xor
@@ -18,6 +18,7 @@ namespace bit {
          * shift left
          * @param n bit count, eg: 2
          */
+        //% weight=80
         //% bit.defl=Bit
         //% block="%Bit|shift left %n"
             shiftLeft(n: number):bit{
@@ -28,6 +29,7 @@ namespace bit {
          * shift right
          * @param n bit count, eg: 2
          */
+        //% weight=85
         //% bit.defl=Bit
         //% block="%Bit|shift right %n"
             shiftRight(n: number):bit{
@@ -38,6 +40,7 @@ namespace bit {
          * and
          * @param b bit , eg: bit
          */
+        //% weight=90
         //% bit.defl=Bit
         //% block="%Bit|shift right %b"
             and(b: bit):bit{
@@ -47,6 +50,7 @@ namespace bit {
         /**
          * convert to number
          */
+        //% weight=95
         //% bit.defl=Bit
         //% block="%Bit|to number"
             toNumber():number{
@@ -57,6 +61,7 @@ namespace bit {
      * Convert number to bit
      * @param n number, eg: 1234
      */
+        //% weight=50
     //% block="convert from number %n"
     export function convNum(n: number): bit {
         let Bit = new bit();
@@ -67,6 +72,7 @@ namespace bit {
      * Convert hexadecimal string to bit
      * @param s hexadecimal strings, eg: 1f
      */
+        //% weight=60
     //% block="convert from hexadecimal %s"
     export function convHex(s: string):bit{
         let Bit = new bit();
@@ -87,6 +93,7 @@ namespace bit {
      * Convert bit string to bit
      * @param s bit strings, eg: 10110
      */
+        //% weight=70
     //% block="convert from binary %s"
     export function convBin(s: string):bit{
         let Bit = new bit();
