@@ -18,7 +18,7 @@ namespace bit {
          * shift left
          * @param n bit count, eg: 2
          */
-        //% weight=80
+        //% weight=85 blockGap=8
         //% block="%bit|shift left %n"
             shiftLeft(n: number):bit{
                 this.num= this.num << n;
@@ -28,7 +28,7 @@ namespace bit {
          * shift right
          * @param n bit count, eg: 2
          */
-        //% weight=85
+        //% weight=85 blockGap=8
         //% block="%bit|shift right %n"
             shiftRight(n: number):bit{
                 this.num= this.num >> n;
@@ -38,7 +38,7 @@ namespace bit {
          * and
          * @param b bit , eg: bit
          */
-        //% weight=90
+        //% weight=85 blockGap=8
         //% block="%bit|and %b"
             and(b: bit):bit{
                 this.num= this.num & b.num;
@@ -47,7 +47,7 @@ namespace bit {
         /**
          * convert to number
          */
-        //% weight=95
+        //% weight=85 blockGap=8
         //% block="%bit|to number"
             toNumber():number{
                 return this.num ;
@@ -57,7 +57,7 @@ namespace bit {
      * Convert number to bit
      * @param n number, eg: 1234
      */
-    //% weight=50
+    //% weight=50 blockGap=8
     //% block="convert from number %n"
     export function convNum(n: number): bit {
         let Bit = new bit();
@@ -68,7 +68,7 @@ namespace bit {
      * Convert hexadecimal string to bit
      * @param s hexadecimal strings, eg: 1f
      */
-    //% weight=60
+    //% weight=60 blockGap=8
     //% block="convert from hexadecimal %s"
     export function convHex(s: string):bit{
         let Bit = new bit();
@@ -89,7 +89,7 @@ namespace bit {
      * Convert bit string to bit
      * @param s bit strings, eg: 10110
      */
-    //% weight=70
+    //% weight=70 blockGap=8
     //% block="convert from binary %s"
     export function convBin(s: string):bit{
         let Bit = new bit();
