@@ -29,6 +29,7 @@ namespace bit {
      * @param n number, eg: 1234
      */
     //% block="convert from number %n"
+    //% trackArgs=0,2
     //% blockSetVariable=Bit
     export function convNum(n: number): bit {
         let Bit = new bit();
