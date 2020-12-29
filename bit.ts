@@ -28,7 +28,7 @@ namespace bit {
          * @param n bit count, eg: 2
          */
         //% bit.defl=Bit
-        //% block="%Bit|shift left %n|value"
+        //% block="%Bit|shift left %n"
             shiftLeftN(n: number):number{
                 return this.num << n;
             }
