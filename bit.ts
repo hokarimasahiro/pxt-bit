@@ -35,6 +35,16 @@ namespace bit {
                 return this;
             }
         /**
+         * and
+         * @param b bit , eg: bit
+         */
+        //% bit.defl=Bit
+        //% block="%Bit|shift right %b"
+            and(b: bit):bit{
+                this.num= this.num & b.num;
+                return this;
+            }
+        /**
          * convert to number
          */
         //% bit.defl=Bit
