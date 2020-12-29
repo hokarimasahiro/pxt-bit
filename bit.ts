@@ -19,7 +19,7 @@ namespace bit {
          * @param n bit count, eg: 2
          */
         //% bit.defl=Bit
-        //% block="shift left %n"
+        //% block="%Bit|shift left %n"
             shiftLeft(n: number){
                 this.num=this.num << n;
             }
@@ -29,7 +29,6 @@ namespace bit {
      * @param n number, eg: 1234
      */
     //% block="convert from number %n"
-    //% trackArgs=0,2
     //% blockSetVariable=Bit
     export function convNum(n: number): bit {
         let Bit = new bit();
