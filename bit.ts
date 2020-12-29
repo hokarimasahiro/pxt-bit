@@ -22,6 +22,7 @@ namespace bit {
         //% block="%Bit|shift left %n"
             shiftLeft(n: number){
                 this.num=this.num << n;
+                return this.num;
             }
     }
     /**
