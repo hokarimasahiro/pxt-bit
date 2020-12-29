@@ -14,11 +14,11 @@ namespace bit {
     }
     export class bit {
         num:number;
-    /**
-     * Convert hexadecimal string to number
-     * @param s hexadecimal strings, eg: 1f
-     */
-    //% block="hexToNumver %s"
+        /**
+         * Convert hexadecimal string to number
+         * @param s hexadecimal strings, eg: 1f
+         */
+        //% block="hexToNumver %s"
         hexToNumber(s: string){
             let hex="0123456789abcdef";
             let HEX="0123456789ABCDEF";
@@ -33,14 +33,15 @@ namespace bit {
             }
             return r
         }
-    /**
-     * shift left
-     * @param n bit count, eg: 2
-     */
-    //% block="shift left %n"
-        shiftLeft(n: number){
-            this.num=this.num << n;
-        }
+        /**
+         * shift left
+         * @param n bit count, eg: 2
+         */
+        //% Bit.defl=Bit
+        //% block="shift left %n"
+            shiftLeft(n: number){
+                this.num=this.num << n;
+            }
     }
     /**
      * Convert number to bit
