@@ -49,6 +49,7 @@ namespace bit {
      * @param s hexadecimal strings, eg: 1f
      */
     //% block="convert from hexadecimal %s"
+    //% blockSetVariable=Bit
     export function convHex(s: string):bit{
         let Bit = new bit();
         let hex="0123456789abcdef";
@@ -69,6 +70,7 @@ namespace bit {
      * @param s bit strings, eg: 10110
      */
     //% block="convert from binary %s"
+    //% blockSetVariable=Bit
     export function convBin(s: string):bit{
         let Bit = new bit();
         Bit.num = 0;
