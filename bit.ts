@@ -15,25 +15,6 @@ namespace bit {
     export class bit {
         num:number;
         /**
-         * Convert hexadecimal string to number
-         * @param s hexadecimal strings, eg: 1f
-         */
-        //% block="hexToNumver %s"
-        hexToNumber(s: string){
-            let hex="0123456789abcdef";
-            let HEX="0123456789ABCDEF";
-            let r = 0;
-            for (let i = 0; i < s.length; i++) {
-                if(hex.indexOf(s.charAt(i))!=-1)
-                    r = (r << 4) + hex.indexOf(s.charAt(i))
-                else if (HEX.indexOf(s.charAt(i))!=-1)
-                    r = (r << 4) + HEX.indexOf(s.charAt(i))
-                else
-                    r = (r << 4)
-            }
-            return r
-        }
-        /**
          * shift left
          * @param n bit count, eg: 2
          */
@@ -47,11 +28,47 @@ namespace bit {
      * Convert number to bit
      * @param n number, eg: 1234
      */
-    //% block="convert to bit %n"
+    //% block="convert from number %n"
     //% blockSetVariable=Bit
-    export function convToBit(n: number): bit {
+    export function convNum(n: number): bit {
         let Bit = new bit();
         Bit.num=n;
         return Bit;
+    }
+    /**
+     * Convert hexadecimal string to bit
+     * @param s hexadecimal strings, eg: 1f
+     */
+    //% block="convert from hexadecimal %s"
+    export function convHex(s: string):bit{
+        let Bit = new bit();
+        let hex="0123456789abcdef";
+        let HEX="0123456789ABCDEF";
+        Bit.num = 0;
+        for (let i = 0; i < s.length; i++) {
+            if(hex.indexOf(s.charAt(i))!=-1)
+                Bit.num = (Bit.num << 4) + hex.indexOf(s.charAt(i))
+            else if (HEX.indexOf(s.charAt(i))!=-1)
+                Bit.num = (Bit.num << 4) + HEX.indexOf(s.charAt(i))
+            else
+                Bit.num = (Bit.num << 4)
+        }
+        return Bit
+    }
+    /**
+     * Convert bit string to bit
+     * @param s bit strings, eg: 10110
+     */
+    //% block="convert from binary %s"
+    export function convBin(s: string):bit{
+        let Bit = new bit();
+        Bit.num = 0;
+        for (let i = 0; i < s.length; i++) {
+            if(s.charAt(i)=="1")
+                Bit.num = (Bit.num << 1) + 1
+            else
+                Bit.num = (Bit.num << 1)
+        }
+        return Bit
     }
 }
