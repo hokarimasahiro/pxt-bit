@@ -40,15 +40,15 @@ namespace bit {
     //% block="shift left %n"
         shiftLeft(n: number){
             this.num=this.num << n;
-            return this
         }
     }
     /**
      * Convert number to bit
      * @param n number, eg: 1234
      */
-    //% block="create %m"
-    export function create(n: number): bit {
+    //% block="convert to bit %n"
+    //% blockSetVariable=Bit
+    export function convToBit(n: number): bit {
         let Bit = new bit();
         Bit.num=n;
         return Bit;
