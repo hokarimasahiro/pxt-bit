@@ -30,7 +30,7 @@ namespace bit {
         //% bit.defl=Bit
         //% block="%Bit|shift left %n|value"
             shiftLeftN(n: number):number{
-                return this.num << 2;
+                return this.num << n;
             }
     }
     /**
