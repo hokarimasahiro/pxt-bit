@@ -18,7 +18,7 @@ namespace bit {
          * shift left
          * @param n bit count, eg: 2
          */
-        //% weight=85 blockGap=8
+        //% weight=10 blockGap=8
         //% Bit.defl=bit
         //% block="%bit|shift left %n"
             shiftLeft(n: number):bit{
@@ -30,7 +30,7 @@ namespace bit {
          * @param n bit count, eg: 2
          */
         //% Bit.defl=bit
-        //% weight=80 blockGap=8
+        //% weight=9 blockGap=8
         //% block="%bit|shift right %n"
             shiftRight(n: number):bit{
                 this.num= this.num >> n;
@@ -41,7 +41,7 @@ namespace bit {
          * @param b bit , eg: bit
          */
         //% Bit.defl=bit
-        //% weight=75 blockGap=8
+        //% weight=8 blockGap=8
         //% block="%bit|and %b"
             and(b: bit):bit{
                 this.num= this.num & b.num;
@@ -51,7 +51,7 @@ namespace bit {
          * convert to number
          */
         //% Bit.defl=bit
-        //% weight=70 blockGap=8
+        //% weight=7 blockGap=8
         //% block="%bit|to number"
             toNumber():number{
                 return this.num ;
