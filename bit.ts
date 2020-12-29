@@ -42,7 +42,7 @@ namespace bit {
          */
         //% weight=90
         //% bit.defl=Bit
-        //% block="%Bit|shift right %b"
+        //% block="%Bit|and %b"
             and(b: bit):bit{
                 this.num= this.num & b.num;
                 return this;
