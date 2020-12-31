@@ -1,6 +1,6 @@
 //% color=#0fbc11 icon="\u265f" block="bit"
-namespace bitOperation {
-    export class bit {
+namespace bit {
+    export class bitClass {
         num:number;
         /**
          * shift left
@@ -8,8 +8,8 @@ namespace bitOperation {
          */
         //% weight=100 blockGap=8
         //% block="%bit|<< %n"
-            shiftLeft(n: number):bit{
-                let Bit=new bit();
+            shiftLeft(n: number):bitClass{
+                let Bit=new bitClass();
                 Bit.num= this.num << n;
                 return Bit;
             }
@@ -18,8 +18,8 @@ namespace bitOperation {
          * @param n bit count, eg: 2
          */
         //% block="%bit|>> %n"
-            shiftRight(n: number):bit{
-                let Bit=new bit();
+            shiftRight(n: number):bitClass{
+                let Bit=new bitClass();
                 Bit.num= this.num >> n;
                 return Bit;
             }
@@ -28,8 +28,8 @@ namespace bitOperation {
          * @param b bit , eg: bit
          */
         //% block="%bit|and %b"
-            and(b: bit):bit{
-                let Bit=new bit();
+            and(b: bitClass):bitClass{
+                let Bit=new bitClass();
                 Bit.num= this.num & b.num;
                 return Bit;
             }
@@ -38,8 +38,8 @@ namespace bitOperation {
          * @param b bit , eg: bit
          */
         //% block="%bit|or %b"
-            or(b: bit):bit{
-                let Bit=new bit();
+            or(b: bitClass):bitClass{
+                let Bit=new bitClass();
                 Bit.num= this.num & b.num;
                 return Bit;
             }
@@ -48,8 +48,8 @@ namespace bitOperation {
          * @param b bit , eg: bit
          */
         //% block="%bit|xor %b"
-            xor(b: bit):bit{
-                let Bit=new bit();
+            xor(b: bitClass):bitClass{
+                let Bit=new bitClass();
                 Bit.num= this.num & b.num;
                 return Bit;
             }
@@ -66,8 +66,8 @@ namespace bitOperation {
      * @param n number, eg: 1234
      */
     //% block="%n"
-    export function convNum(n: number): bit {
-        let Bit = new bit();
+    export function convNum(n: number): bitClass {
+        let Bit = new bitClass();
         Bit.num=n;
         return Bit;
     }
@@ -76,8 +76,8 @@ namespace bitOperation {
      * @param s hexadecimal strings, eg: 1f
      */
     //% block="convert from hexadecimal %s"
-    export function convHex(s: string):bit{
-        let Bit = new bit();
+    export function convHex(s: string):bitClass{
+        let Bit = new bitClass();
         let hex="0123456789abcdef";
         let HEX="0123456789ABCDEF";
         Bit.num = 0;
@@ -96,8 +96,8 @@ namespace bitOperation {
      * @param s bit strings, eg: 10110
      */
     //% block="convert from binary %s"
-    export function convBin(s: string):bit{
-        let Bit = new bit();
+    export function convBin(s: string):bitClass{
+        let Bit = new bitClass();
         Bit.num = 0;
         for (let i = 0; i < s.length; i++) {
             if(s.charAt(i)=="1")
