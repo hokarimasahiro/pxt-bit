@@ -1,4 +1,4 @@
-//% color=#0fbc11 icon="\u265f" block="bit"
+//% weight=100 color=#0fbc11 icon="\u265f" block="bit"
 namespace bit {
     export enum func{
         //% block=xor
