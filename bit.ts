@@ -6,6 +6,7 @@ namespace bit {
          * shift left
          * @param n bit count, eg: 2
          */
+        //% weight=100 blockGap=8
         //% block="%bit|<< %n"
             shiftLeft(n: number):bit{
                 let Bit=new bit();
