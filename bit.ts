@@ -1,24 +1,12 @@
 //% color=#0fbc11 icon="\u265f" block="bit"
 namespace bit {
-    export enum func{
-        //% block=xor
-        xor=0,
-        //% block=or
-        or=1,
-        //% block=and
-        and=2,
-        //% block="<<"
-        shiftLeft=4,
-        //% block=">>"
-        shiftRight=5
-    }
     export class bit {
         num:number;
         /**
          * shift left
          * @param n bit count, eg: 2
          */
-        //% block="%bit|shift left %n"
+        //% block="%bit|<< %n"
             shiftLeft(n: number):bit{
                 let Bit=new bit();
                 Bit.num= this.num << n;
@@ -28,7 +16,7 @@ namespace bit {
          * shift right
          * @param n bit count, eg: 2
          */
-        //% block="%bit|shift right %n"
+        //% block="%bit|>> %n"
             shiftRight(n: number):bit{
                 let Bit=new bit();
                 Bit.num= this.num >> n;
@@ -40,6 +28,26 @@ namespace bit {
          */
         //% block="%bit|and %b"
             and(b: bit):bit{
+                let Bit=new bit();
+                Bit.num= this.num & b.num;
+                return Bit;
+            }
+        /**
+         * or
+         * @param b bit , eg: bit
+         */
+        //% block="%bit|or %b"
+            or(b: bit):bit{
+                let Bit=new bit();
+                Bit.num= this.num & b.num;
+                return Bit;
+            }
+        /**
+         * xor
+         * @param b bit , eg: bit
+         */
+        //% block="%bit|xor %b"
+            xor(b: bit):bit{
                 let Bit=new bit();
                 Bit.num= this.num & b.num;
                 return Bit;
