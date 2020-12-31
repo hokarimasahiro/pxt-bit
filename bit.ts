@@ -1,4 +1,4 @@
-//% weight=100 color=#0fbc11 icon="\u265f" block="bit"
+//% color=#0fbc11 icon="\u265f" block="bit"
 namespace bit {
     export enum func{
         //% block=xor
@@ -19,7 +19,6 @@ namespace bit {
          * @param n bit count, eg: 2
          */
         //% weight=10 blockGap=8
-        //% Bit.defl=bit
         //% block="%bit|shift left %n"
             shiftLeft(n: number):bit{
                 let Bit=new bit();
@@ -30,7 +29,6 @@ namespace bit {
          * shift right
          * @param n bit count, eg: 2
          */
-        //% Bit.defl=bit
         //% weight=9 blockGap=8
         //% block="%bit|shift right %n"
             shiftRight(n: number):bit{
@@ -42,7 +40,6 @@ namespace bit {
          * and
          * @param b bit , eg: bit
          */
-        //% Bit.defl=bit
         //% weight=8 blockGap=8
         //% block="%bit|and %b"
             and(b: bit):bit{
@@ -53,7 +50,6 @@ namespace bit {
         /**
          * convert to number
          */
-        //% Bit.defl=bit
         //% weight=7 blockGap=8
         //% block="%bit|to number"
             toNumber():number{
