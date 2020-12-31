@@ -1,5 +1,5 @@
 //% color=#0fbc11 icon="\u265f" block="bit"
-namespace bit {
+namespace bitOperation {
     export class bit {
         num:number;
         /**
