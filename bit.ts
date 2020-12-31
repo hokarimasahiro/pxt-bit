@@ -65,7 +65,7 @@ namespace bit {
      * @param n number, eg: 1234
      */
     //% weight=120 blockGap=8
-    //% block="convert from number %n"
+    //% block="%n"
     export function convNum(n: number): bit {
         let Bit = new bit();
         Bit.num=n;
